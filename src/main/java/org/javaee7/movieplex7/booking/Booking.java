@@ -76,7 +76,7 @@ public class Booking implements Serializable {
         try {
             return em.createNamedQuery("Movie.findById", Movie.class).setParameter("id", movieId).getSingleResult().getName();
         } catch (NoResultException e) {
-            return "";
+        	throw e;
         }
     }
 
@@ -114,7 +114,7 @@ public class Booking implements Serializable {
                     .getTheaterId()
                     .getId().toString();
         } catch (NoResultException e) {
-            return "none";
+        	throw e;
         }
     }
 }

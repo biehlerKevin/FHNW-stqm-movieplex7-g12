@@ -67,6 +67,7 @@ public class SalesBean {
             System.out.println("Started job: with id: " + jobId);
         } catch (JobStartException ex) {
             ex.printStackTrace();
+        	throw ex;
         }
     }
     
