@@ -40,6 +40,10 @@
 package org.javaee7.movieplex7.booking;
 
 import java.io.Serializable;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory; 
+
 import java.util.List;
 import java.util.StringTokenizer;
 import javax.faces.flow.FlowScoped;
@@ -57,6 +61,8 @@ import org.javaee7.movieplex7.entities.ShowTiming;
 @FlowScoped("booking")
 public class Booking implements Serializable {
 
+	 private Log log = LogFactory.getLog(Booking.class);
+	
     int movieId;
     String startTime;
     int startTimeId;

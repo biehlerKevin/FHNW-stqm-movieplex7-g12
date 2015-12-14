@@ -60,9 +60,9 @@ public class SalesWriter extends AbstractItemWriter {
     @Override
     @Transactional
     public void writeItems(List list) {
-        for (Sales s : (List<Sales>)list) {
-            System.out.println("SalesWriter.writeItem: " + s);
-            em.persist(s);
+    for (Sales s : (List<Sales>)list) {
+      System.out.println("SalesWriter.writeItem: " + s);
+      em.persist(s);
         }
     }
 }
