@@ -32,7 +32,7 @@ public class MoviePlexTest {
         
         
         
-//        driver.quit();
+        driver.quit();
 	}
 	
 	
